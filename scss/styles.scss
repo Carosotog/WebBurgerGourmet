@@ -1,0 +1,1111 @@
+/* --- Estilos del Header y el Footer ---  */
+
+/* VARIABLES */
+@import "./variables";
+/* HEADER */
+@import "./header";     
+/* FOOTER */
+@import "./footer";  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:$tertiaryColor;
+    font-family: 'Roboto', sans-serif;
+    
+    span {
+        color: $secondaryColor;
+        font-weight: 600;
+   }
+}
+
+
+/* ------------------------------ Página de Inicio ------------------------------  */
+
+/* Hero */
+
+/* --- Carrusel animado con 3 imágenes + info de nombre y botón de ---  */
+@keyframes animacionHero {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+
+    .menu__logo__blanco {
+        display: none;
+    }
+
+    .hero__photo1 {
+        background-image: url("../multimedia/home/hero1.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        animation:animacionHero 30s linear 20s infinite;
+    }
+    
+    .hero_photo2 {
+        background-image: url("../multimedia/home/hero2.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        animation:animacionHero 30s linear 10s infinite;
+    }
+    
+    .hero__photo3 {
+        background-image: url("../multimedia/home/hero3.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        animation:animacionHero 30s linear 0s infinite;
+    }
+
+    .hero__infoHero {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        font-size: 2rem;
+        color: $tertiaryColor;
+
+        a {
+            @include font(500, 1.1rem);
+            text-decoration: none;
+            background-color: #666666a1;
+            color: $tertiaryColor;
+            border: 2px solid $tertiaryColor;
+            padding: .4rem;
+            border-radius: 5px;
+
+            &:hover {
+                background-color:$hoverColor;
+            }
+        }
+    }
+
+    /* --- Contenedor .tituloH1 arriba de la img con info relevante en el H1 ---  */
+
+    .hero__tituloH1 {
+        position: absolute;
+        background-color: rgba(158, 52, 58, 0.6);
+        width: 500px;
+        height: 180px;
+        margin-left: 10%;
+
+        h1 {    
+            @include font(500, 3.4rem);
+            padding: 10px;
+            text-align: left;
+            line-height: 55px;
+            color:$tertiaryColor;
+        }
+    }    
+}
+
+/* Promociones */
+
+h1 {
+    @include font(600, 3rem);
+    text-align: center;
+    color: $secondaryColor;
+}
+
+h2 {
+    @extend h1;
+}
+
+.promociones {
+    text-align: center;
+    margin: 50px;
+
+    p {
+        @include font(400, 1.5rem);
+        margin-bottom: 40px;
+        color: $primaryColor;
+    }
+
+    .promocionesCards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        margin-top: 50px;
+
+        .promociones__cardPromo {
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px 5px rgb(207, 206, 206)
+            }
+
+            .promociones__infoPromo {
+                background-color: rgba(158, 52, 58, 0.7);;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 30%;
+                padding: 15px;
+                transition: height 1s;
+
+                &:hover {
+                    height: 120px;
+                }
+
+                p {
+                    @include font(300, 1.8rem);
+                    color: $tertiaryColor;
+                    margin: 0;
+                }
+            }
+        }
+
+        .promociones__cardPromo a {
+            position: absolute;
+            top: 70%;
+            text-decoration: none;
+            background-color: #666666a1;
+            color: $tertiaryColor;
+            border: 2px solid $tertiaryColor;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: .4rem;
+            border-radius: 5px;
+
+            &:hover {
+                background-color:$hoverColor;
+            }
+        }
+    }
+}
+
+/* Nuestros Chefs */
+
+.chefs {
+    text-align: center;
+    margin: 50px 50px;
+
+    p {
+        @include font(400, 1.5rem);
+        margin-bottom: 40px;
+        color: $primaryColor;
+    }
+    
+    .chefsCards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        margin-top: 50px;
+
+        .cardChef {
+            background-color: $primaryColor;
+            border-radius: 5px;
+            margin-bottom:20px;
+            width: 550px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            box-shadow: 0px 0px 5px 5px rgb(207, 206, 206);
+
+            .imgChef {
+                height: 500px;
+                border-radius: 5px;
+            }
+            
+            .infoChef {
+                color: $tertiaryColor;
+                text-align: left;
+                padding: 20px;
+
+                h3 {
+                    @include font(500, 2.3rem);
+                    line-height: 2.3rem;
+                }
+
+                p {
+                    @include font(300, 1.3rem);
+                    line-height: 1.3rem;
+                    text-align: left;
+                    margin-bottom: 10px;
+                    color: $tertiaryColor;
+                }
+            }
+        }       
+    }
+}
+
+/* Newsletter */
+
+.newsletter {
+    margin: 50px 50px;
+    background-color: $secondaryColor;
+    color: $tertiaryColor;
+    position: relative;
+    box-shadow: 0px 0px 5px 5px rgb(207, 206, 206);
+
+    .newsletterInfo {
+        padding: 40px;
+        width: 95%;
+    }
+
+    h3 {
+        @include font(500, 2rem);
+        line-height: 30px;
+        width: 50%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .email {
+            margin-top: 10px;
+            width: 30%;
+            height: 25px;
+            border: none;
+            padding-left: 10px;
+        }
+        
+        .botonEnviar {
+            background-color: $primaryColor;
+            color: $tertiaryColor;
+            padding:6px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .newsletterImg {
+        background-image: url("../multimedia/home/newsletter1.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        width: 50%;
+    }
+}
+
+/* ------------------------------ Página de Sucursales ------------------------------  */
+
+/* BANNER SUCURSALES*/
+
+.sucursales {
+    margin: 50px 50px;
+
+    .imgHeroSucursales {
+        background-image: url(../multimedia/sucursales/delivery1.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        height:400px;
+        margin-top: 50px;
+        box-shadow: 0px 0px 5px 5px rgb(207, 206, 206);
+
+        .sucursales__cardTitulo {
+            background-color: rgba(158, 52, 58, 0.6);
+            width: 400px;
+            height: 250px;
+            margin-left: 40px;
+
+            p {
+                @include font(500, 3.4rem);
+                padding: 10px;
+                text-align: left;
+                line-height: 45px;
+                color: $tertiaryColor;
+            }
+        }
+    }
+
+    /*SUCURSALES CARDS*/
+
+    .sucursalesCards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .cardSucursales {   
+            margin:50px 0;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            
+            h3 {
+                @include font(500, 2rem);
+                color: $primaryColor;
+            }
+
+            p {
+                @include font(300, 1.5rem);
+                margin-bottom: 20px;
+                color: $primaryColor;
+            }
+
+            .sucursalesIMG1 {
+                background-image: url(../multimedia/sucursales/sucursal1.jpg);
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                border-radius: 5px;
+                width: 100%;
+                height: 520px;
+                box-shadow: 0px 0px 5px 5px rgb(207, 206, 206);
+                margin-bottom: 20px;
+            }
+
+            .sucursalesIMG2 {
+                background-image: url(../multimedia/sucursales/sucursal2.jpg);
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                border-radius: 5px;
+                width: 100%;
+                height: 520px;
+                box-shadow: 0px 0px 5px 5px rgb(207, 206, 206);
+                margin-bottom: 20px;
+            }
+
+            .infoSucursal {
+                background-color: rgba(29, 44, 54, 0.8);
+                position: absolute;
+                border-radius: 5px;
+                height: 25%;
+                bottom: 0%;
+
+                p {
+                    @include font(400, 1.3rem);
+                    color: $tertiaryColor;
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}
+
+/* ------------------------------ Página de Menú ------------------------------  */
+
+/*PRODUCTOS EN VENTA, VARIEDADES DE LAS HAMBURGUESAS*/
+
+.menuHamburguesas{
+    margin: 50px 50px;
+
+    .hamburguesasCards {
+        margin: 50px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .cardHamburguesas {
+            width: 370px;
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: #f2f2f2;
+            box-shadow: 0px 0px 5px 5px rgb(207, 206, 206);
+            padding: 15px;
+            border-radius: 5px;
+
+            .infoHamburguesas__nombre {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: flex-end;
+
+                h3 {
+                    @include font(500, 2rem);
+                    margin: 5px 0;
+                    color: $primaryColor;
+                }
+    
+                i {
+                    color: #D9A215;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .cardHamburguesa__borde{
+                border-top: 5px solid $secondaryColor;
+                margin-bottom: 10px;
+            }
+
+            .imgHmburguesa {
+                margin: 10px 0;
+                border-radius: 5px;
+                cursor: pointer;
+                -webkit-filter:grayscale(1);
+                filter:grayscale(1);
+
+                &:hover {
+                    -webkit-filter:grayscale(0);
+                    filter:grayscale(0);
+                }
+            }
+
+            .infoHamburguesas__precio {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+
+                p {
+                    @include font(200, 2rem);
+                    font-weight: 600;
+                    color: $secondaryColor;
+                }
+
+                a {
+                    @include font(400, 1rem);
+                    text-decoration: none;
+                    background-color: $hoverColor;
+                    color: $tertiaryColor;
+                    padding: 7px;
+                    border-radius: 5px;
+                    font-weight: 600;
+
+                    &:hover  {
+                        background-color: $secondaryColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ------------------------------ Página de Delivery ------------------------------  */
+
+/*BANNER*/
+
+.delivery {
+    margin: 50px 50px;
+
+    .imgHeroDelivery {
+        background-image: url(../multimedia/delivery/deliveryBanner.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        height:300px;
+        margin: 50px 0;
+        box-shadow: 0px 0px 5px 5px rgb(214, 214, 214);
+
+        .cardDelivery {
+            background-color: rgba(158, 52, 58, 0.6);
+            color: $tertiaryColor;
+            height: 100%;
+            width: 40%;
+            padding: 30px;
+            text-align: center;
+
+            h3 {
+                @include font(500, 3rem);
+            }
+
+            p {
+                @include font(300, 2rem);
+            }
+        }
+    }
+
+    /*PEDIDOS*/
+
+    h4 {
+        @include font(500, 2rem);
+        margin-top: 40px;
+        color: $primaryColor;
+    }
+
+    form {
+        display: grid;
+        align-items: center;
+        grid-template-areas:
+            "form__datos "
+            "form__hamburguesas"
+            "form__pago"
+            "form__enviar";
+        grid-template-rows: 1fr 100px 70px 50px; 
+        grid-template-columns: 100%;
+
+        .form__datos {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+
+            .formEstilo {
+                margin: 5px 10px;
+                width: 350px;
+                height: 25px;
+                border-radius: 5px;
+                border: 3px solid $secondaryColor;
+                padding: 15px;
+                box-shadow: 0px 0px 5px 5px rgb(214, 214, 214);
+            }
+        }
+
+        .form__hamburguesas {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            @include font(500, 1.1rem);
+            color: $primaryColor;
+        }
+
+        .form__pago{
+            margin: 0 auto;
+            width: 250px;
+            height: 30px;
+            border: 3px solid $secondaryColor;
+            border-radius: 5px;
+            background-color: $tertiaryColor;
+            color: $primaryColor;
+            box-shadow: 0px 0px 5px 5px rgb(214, 214, 214);
+            cursor: pointer;
+        }
+
+        .form__enviar{
+            @include font(500, 1rem);
+            outline: none;
+            margin: 0 auto;
+            width: 150px;
+            height: 30px;
+            border: 3px solid $secondaryColor;
+            border-radius: 5px;
+            background-color: $secondaryColor;
+            color: $tertiaryColor;
+            box-shadow: 0px 0px 5px 5px rgb(214, 214, 214);
+            cursor: pointer;
+
+            &:hover {
+                background-color: $hoverColor;
+                border: 3px solid $hoverColor;
+            }
+        }    
+    }
+}
+/* ------------------------------ Página de Reservsa ------------------------------  */
+
+/*RESERVA MESA*/
+
+.reserva {
+    margin: 50px 50px;
+    color: $primaryColor;
+    
+    p {
+        margin-bottom: 20px;
+    }
+
+    .cardReserva {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 50px;
+
+        .formReserva {                
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+    
+            .formEstiloReserva {
+                margin-bottom: 10px;
+                height: 25px;
+                border-radius: 5px;
+                border: 3px solid $secondaryColor;
+                padding: 15px;
+                box-shadow: 0px 0px 5px 5px rgb(214, 214, 214)
+            }
+
+            .formEstiloReserva__solicitud{
+                margin: 10px 0;
+                height: 100px;
+                border-radius: 5px;
+                border: 3px solid $secondaryColor;
+                box-shadow: 0px 0px 5px 5px rgb(214, 214, 214)
+            }
+    
+            .enviarReserva {
+                @include font(500, 1rem);
+                margin-top: 10px;
+                padding: 7px;
+                border: 0px;
+                border-radius: 5px;
+                outline: none;
+                background-color: $secondaryColor;
+                color: $tertiaryColor;
+                box-shadow: 0px 0px 5px 5px rgb(214, 214, 214);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $hoverColor;
+                }
+            }
+        }
+
+    /*RESERVA IMG*/
+
+        .reservaFotos {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+    
+            .reservaFoto1 {
+                background-image: url(../multimedia/reserva/reserva1.jpg);
+                background-position: center;
+                background-size: cover;
+                border-radius: 5px;
+                width: 100%;
+                height: 200px;
+                box-shadow: 0px 0px 5px 5px rgb(207, 206, 206);
+                margin-bottom: 10px;
+            }
+            
+            .reservaFoto2 {
+                background-image: url(../multimedia/reserva/reserva2.jpg);
+                background-position: center;
+                background-size: cover;
+                border-radius: 5px;
+                width: 100%;
+                height: 200px;
+                box-shadow: 0px 0px 5px 5px rgb(207, 206, 206);
+                margin-bottom: 10px;
+            }
+            
+            .reservaFoto3 {
+                background-image: url(../multimedia/reserva/reserva3.jpg);
+                background-position: center;
+                background-size: cover;
+                border-radius: 5px;
+                width: 100%;
+                height: 200px;
+                box-shadow: 0px 0px 5px 5px rgb(207, 206, 206);
+            }
+        }
+    }
+}
+
+ /* --------------------------------------------------------------- Media-Query--------------------------------------------------------------- */
+
+ /* ------------------------------ 1000px ------------------------------  */
+
+@media (max-width:1000px) {
+
+    /* Ajuste de las medidas en H1 y Newsletter, el form del mail queda arriba y la img pasa abajo + ajustes en la página Sucursales, las CARDS pasan a Column */
+
+    /* ------------------------------ Página de Inicio ------------------------------  */   
+    /*HERO*/  
+    .hero {
+        
+        .hero__tituloH1 {
+            width: 450px;
+            height: 160px;
+
+    
+            h1 {    
+                line-height: 2.9rem;
+                font-size: 2.9rem;
+                color:$tertiaryColor;
+            }
+        }  
+    }
+    
+    /* Newsletter */
+
+    .newsletter {
+         margin: 50px;
+
+        .newsletterInfo {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+
+            h3 {
+            font-size: 20px;
+            line-height: 20px;
+            padding: 5px;
+            }
+        }
+    }
+
+
+
+    /* ------------------------------ Página de Sucursales ------------------------------  */
+
+    /*SECCIÓN SUCURSALES CARD INFO*/  
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .sucursales {
+        margin: 50px 20px;
+
+        .sucursalesCards {
+            display: flex;
+            flex-direction: column;
+
+            .cardSucursales {
+                width: 100%;
+
+                .infoSucursal {
+                    height: 20%;
+                }
+            }
+        }
+    }
+
+        /* ------------------------------ Página de Delivery ------------------------------  */
+    
+    /*SECCIÓN HERO DELIVERY*/  
+    .delivery {   
+        .imgHeroDelivery {
+            height: 500px;
+        
+            .cardDelivery {
+                position: absolute;
+                top: 300px;
+                height: 200px;
+                width: 100%;
+                padding: 20px;
+        
+                h3 {
+                    font-size: 3rem;
+                }
+        
+                p {
+                    font-size: 2rem;
+                 }
+            }
+        }
+    } 
+}
+
+
+/* ------------------------------ 700px ------------------------------  */
+/* Ajuste de la sección CHEF y el H3 y el p, también se ajustaron las imágenes de la página Reserva*/
+
+@media (max-width: 700px) {
+
+    /* ------------------------------ Página de Inicio ------------------------------  */   
+
+    /*SECCIÓN CHEF INFO*/   
+    .chefs {       
+        .chefsCards {   
+            .cardChef {               
+               .infoChef {   
+                    h3 {
+                        font-size: 2rem;
+                        line-height: 2rem;
+                    }
+    
+                    p {
+                        font-size: 1.3rem;
+                        line-height: 1.3rem;
+                    }
+                }
+            }       
+        }
+    }
+    
+    /* ------------------------------ Página de Reservsa ------------------------------  */
+
+    /*SECCIÓN FOTOS*/   
+    .reserva{
+        .cardReserva {
+            .reservaFotos {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* ------------------------------ 600px ------------------------------  */
+
+@media (max-width: 600px) {
+
+/* Ajuste del Hero y el H1, la sección sCHEF y ahora pasa a flex-direction:columna, quedando arriba la imagen y abajo el contenedor con la información, medidas del Newsletter + ajustes a la página Sucursales */
+    
+    /* ------------------------------ Página de Inicio ------------------------------  */   
+
+    /* Hero*/
+    .hero {
+        .hero__tituloH1{
+            width: 400px;
+            height: 140px;
+
+            h1 {    
+                line-height: 2.5rem;
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    h2 {
+    font-size: 2rem;
+    }
+
+    /* Nuestros Chefs */
+    .chefs {
+        .chefsCards {
+            .cardChef {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                
+                .imgChef {
+                    width: 100%;
+                    height: auto;
+
+                }
+            }
+        }
+    }
+
+    /* Newsletter */
+
+    .newsletter {
+        height: 300px;
+
+        .newsletterInfo {
+            padding: 20px;
+
+            h3 {
+                width: 100%;
+            }
+
+            .newsletterImg {
+                top: 60%;
+                width: 100%;
+                height: 150px;
+            }
+
+            .email {
+                width: 80%;
+            }
+        }
+    }
+
+    /* ------------------------------ Página de Sucursales ------------------------------  */
+
+   /*HERO SUCURSALES*/
+    .sucursales {
+        .imgHeroSucursales {
+            .sucursales__cardTitulo {
+                width: 250px;
+                height: 180px;
+                margin-left: 20px;
+    
+                p {
+                    line-height: 2rem;
+                    font-size: 2rem;
+
+                }
+            }
+        }
+
+    /*INFO SUCURSALES*/       
+        .sucursalesCards {
+            display: flex;
+            flex-direction: column;
+    
+            .cardSucursales {
+                width: 100%;
+    
+                .infoSucursal {
+                    height: 20%;
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }       
+    }   
+}   
+
+    /* ------------------------------ MOBILE ------------------------------  */
+ 
+ @media (max-width:450px) {
+
+/* Versión mobile donde se ajusta el HERO, PROMOCIONES y CHEF */  
+
+     /* ------------------------------ Página de Inicio ------------------------------  */  
+    /* HERO*/
+    .hero {
+
+        .menu__logo__blanco {
+            position: absolute;
+            display: inline;
+            height: 100px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto auto 30px auto;
+            
+        }
+
+        .hero__tituloH1{
+            width: 250px;
+            height: 100px;
+
+            h1 {    
+                line-height: 1.8rem;
+                font-size: 1.7rem;
+            }
+        }
+
+        .hero__infoHero {
+            top: 20%;
+        }
+    }
+
+     /*PROMOCIONES*/
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .promociones {
+        margin: 50px 20px;
+
+        p {
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+        }
+
+        .promocionesCards {
+            .promociones__cardPromo {
+    
+                img {
+                    width: 100%;
+                }
+
+                .promociones__infoPromo {
+                    height: 40%;
+                    padding: 20px;
+        
+                    p {
+                        font-size: 1.8rem;
+                        line-height: 1.8rem;
+                    }
+                }
+            }   
+        }   
+    }
+
+    /*CHEFS*/
+
+    .chefs {
+        margin: 50px 20px;
+
+        p {
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+        }
+    }
+
+    /* Newsletter */
+
+    .newsletter {
+        margin: 50px 20px;
+    }
+
+    /* ------------------------------ Página de Menú ------------------------------  */
+
+   /*MENU HAMBURGUESA*/
+    .menuHamburguesas{   
+        .hamburguesasCards {
+            .cardHamburguesas {
+                width: 320px;
+
+                .infoHamburguesas__nombre {
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .imgHmburguesa {
+                    width: 250px;
+                }
+            }
+        }    
+    }    
+    
+    /* ------------------------------ Página de Delivery ------------------------------  */
+
+    /*HERO DELIVERY*/
+    .delivery {
+        margin: 50px 20px;
+
+        .imgHeroDelivery {    
+            .cardDelivery {
+                top: 400px;
+                height: 100px;
+                padding: 15px;
+    
+                h3 {
+                    font-size: 1.5rem;
+                }
+    
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+   /* ------------------------------ Página de Reservsa ------------------------------  */
+
+   /*RESERVA MESA*/
+    .reserva {
+        margin: 50px 20px;              
+    }
+}

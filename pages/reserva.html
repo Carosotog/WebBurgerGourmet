@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta -->
+    <meta name="description" content="Hamburguesas Organánicas en Buenos Aires al mejor estilo Irlandés">
+    <meta name="keywords" content="Burger Gourmet, Hamburguesas, Orgánicas, Atención al cliente, Reserva, Reservar mesa, Contacto, Buenos Aires">
+    <!-- link a google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- logo -->
+    <link rel="icon" href="../multimedia/hamburger-solid 1.svg" type="svg">
+    <!-- iconos de fontawesome -->
+    <script
+    src="https://kit.fontawesome.com/a25bc156df.js" crossorigin="anonymous">
+    </script>
+    <!-- estilos css -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Reserva de Burger Gourmet</title>
+</head>
+<body>
+    <header>   
+        <div class="menu">
+            <!--Nav bar compuesta por un menú de 5 pág, una imagen del logo, boton de pedidos que enlaza a delivery + las redes sociales--> 
+            <nav>    
+                <input type="checkbox" id="check">    
+                <label for="check" class="ckeckboton">
+                    <i class="fas fa-hamburger"></i>
+                </label> 
+                <ul>
+                    <li> <a class="active" href="../index.html">Inicio</a></li>
+                    <li> <a class="active" href="./sucursales.html">Sucursales</a></li>
+                    <li> <a class="active" href="./menu.html">Menú</a></li>
+                    <li> <a class="active" href="./delivery.html">Delivery</a></li>
+                    <li> <a class="active" href="./reserva.html">Reserva</a></li>
+                </ul>
+            </nav>  
+            <div>
+                <a href="../index.html"><img src="../multimedia/home/logo.svg" alt="Logo Burger Gourmet" class="menu__logo"></a> 
+            </div>             
+            <div class="menu__pedidosRedes">
+                <a href="./delivery.html" class="menu__pedidosNav">PEDIDOS</a>
+                <div class="menu__telefonoNav">
+                    <div class="menu__iconosTelNav">
+                        <a class="fas fa-phone-volume" href="#" target="_blank"></a>
+                    </div>
+                    <p>11 56423383</p>  
+                </div>      
+                <div class="menu__iconosNav">
+                    <a class="fab fa-instagram-square" href="#" target="_blank"></a>
+                    <a class="fab fa-facebook-square" href="#" target="_blank"></a>
+                </div>               
+            </div>
+        </div>
+        <div class="redLine"></div>
+    </header>
+    <main>
+        <section class="reserva"> 
+            <h1>HACÉ TU RESERVA</h1>
+            <!--Dos article, una con el form para realizar la Reserva y otra sección con 3 imágenes--> 
+            <div class="cardReserva">            
+                <article>
+                    <form action="" class="formReserva">
+                        <h3>¡Reservá tu mesa!</h3>
+                        <p>En breve te llegará el mail de confirmación.</p>
+                        <label for="nombre"></label>
+                        <input type="text" name="nombre" placeholder="Nombre" class="formEstiloReserva">
+                        <label for="apellido"></label>
+                        <input type="text" name="apellido" placeholder="Apellido" class="formEstiloReserva">
+                        <label for="mail"></label>
+                        <input type="email" name="mail" placeholder="Mail" class="formEstiloReserva">
+                        <label for="comentarios">Describir la solicitud de reserva</label>
+                        <input type="text" name="comentarios" class="formEstiloReserva__solicitud">
+                        <input type="submit" value="RESERVAR" class="enviarReserva">
+                    </form>
+                </article>
+                <article class="reservaFotos">
+                    <div class="reservaFoto1"></div>
+                    <div class="reservaFoto2"></div>
+                    <div class="reservaFoto3"></div>
+                </article>
+            </div>            
+        </section>
+    </main>
+    <footer>
+        <div class="footerPrimera">
+        <!--Sección de Footer, compuesto con las ubicación, Horarios, los derechos reservados, logo y las redes--> 
+            <div class="footer__info">
+                <div>
+                    <h5>Ubicación</h5>
+                    <p>399 Lafayette St,<strong> New York</strong></p>
+                    <p>Charcas 6787,<strong> Buenos Aires</strong></p>
+                </div>
+                <div>
+                    <h5>Horarios</h5>
+                    <p>Lunes - Viernes:<strong> 9am a 23pm</strong></p>
+                    <p>Sábados:<strong> 11am a 20pm</strong></p>
+                </div>
+            </div>
+            <div class="footer__derechos"> 
+                <div>
+                    <p>&copy;Todos los Derechos Reservados</p>
+                </div>
+                <div>
+                    <p>Diseño & Desarrollo Web - Carolina Soto</p>
+                </div>
+            </div>
+            <div class="footer__logoRedes">
+                <div>
+                    <img src="../multimedia/home/logo2.svg" alt="Logo Burger Gourmet" class="logo__footer">
+                </div>
+                <div>
+                    <div class="iconos__footer">
+                        <a class="fab fa-instagram-square" href="#" target="_blank"></a>
+                        <a class="fab fa-facebook-square" href="#" target="_blank"></a>
+                    </div>   
+                </div>  
+            </div>           
+        </div>
+    </footer>  
+</body>
+</html>

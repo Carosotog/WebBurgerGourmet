@@ -1,0 +1,9 @@
+$primaryColor: #1D2C36;
+$secondaryColor: #9E343A;
+$tertiaryColor: #E0E0E0;
+$hoverColor: #3A9E34;
+
+@mixin font($weight, $size) {
+    font-weight: $weight;
+    font-size: $size;
+}

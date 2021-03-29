@@ -1,0 +1,933 @@
+@charset "UTF-8";
+/* --- Estilos del Header y el Footer ---  */
+/* VARIABLES */
+/* HEADER */
+/* NavBar */
+header {
+  margin: 10px 50px;
+  height: 60px;
+  background-color: #E0E0E0;
+  font-size: 1.1rem; }
+  header .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; }
+    header .menu nav {
+      display: flex;
+      flex-direction: row; }
+      header .menu nav ul {
+        display: flex;
+        flex-direction: row;
+        width: 300px; }
+        header .menu nav ul li {
+          list-style: none; }
+          header .menu nav ul li a {
+            text-decoration: none;
+            color: #1D2C36;
+            padding: 5px;
+            font-weight: 700; }
+      header .menu nav .active:hover {
+        background-color: #3A9E34;
+        border-radius: 5px;
+        color: #E0E0E0;
+        padding-top: 40px; }
+      header .menu nav #check:checked ~ ul {
+        right: -50px; }
+      header .menu nav .ckeckboton {
+        font-size: 30px;
+        color: #E0E0E0;
+        cursor: pointer; }
+      header .menu nav #check {
+        display: none; }
+    header .menu .menu__logo {
+      width: 130px; }
+    header .menu .menu__pedidosRedes {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 300px; }
+      header .menu .menu__pedidosRedes .menu__pedidosNav {
+        background-color: #3A9E34;
+        font-weight: 500;
+        padding: .5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #E0E0E0; }
+        header .menu .menu__pedidosRedes .menu__pedidosNav:hover {
+          background-color: #9E343A; }
+      header .menu .menu__pedidosRedes .menu__telefonoNav {
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        header .menu .menu__pedidosRedes .menu__telefonoNav .menu__iconosTelNav a {
+          text-decoration: none;
+          font-size: 25px;
+          color: #1D2C36; }
+          header .menu .menu__pedidosRedes .menu__telefonoNav .menu__iconosTelNav a:hover {
+            color: #3A9E34; }
+        header .menu .menu__pedidosRedes .menu__telefonoNav p {
+          font-size: 20px;
+          font-weight: 500;
+          margin-left: 5px; }
+      header .menu .menu__pedidosRedes .menu__iconosNav a {
+        text-decoration: none;
+        font-size: 25px;
+        color: #1D2C36; }
+        header .menu .menu__pedidosRedes .menu__iconosNav a:hover {
+          color: #3A9E34; }
+  header .redLine {
+    border-top: 5px solid #9E343A; }
+
+/* ------------------------------ 1100px ------------------------------  */
+@media (max-width: 1100px) {
+  /* Ajuste del menú con hambuguesa */
+  /* NavBar */
+  header {
+    background-color: #9E343A;
+    padding: 0;
+    margin: 0; }
+    header .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 15px; }
+      header .menu .menu__pedidosRedes {
+        display: none; }
+      header .menu .menu__logo {
+        display: none; }
+      header .menu nav ul {
+        position: fixed;
+        width: 100%;
+        right: -100%;
+        transition: all .5s;
+        padding-top: 10px; }
+        header .menu nav ul li {
+          margin-right: 1px; }
+          header .menu nav ul li a {
+            font-size: 1rem;
+            color: #E0E0E0; }
+      header .menu .active:hover {
+        color: #1D2C36; }
+      header .menu #check:checked ~ ul {
+        right: -50px; }
+  .redLine {
+    display: none; } }
+
+/* ------------------------------ MOBILE ------------------------------  */
+/* Versión mobile donde se ajusta el tamaño del texto de la NAV */
+@media (max-width: 450px) {
+  header .menu nav ul li a {
+    font-size: .7rem; } }
+
+/* FOOTER */
+/* FOOTER */
+footer {
+  margin-top: 80px;
+  height: 120px; }
+  footer .footerPrimera {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #9E343A;
+    padding: 10px;
+    color: #E0E0E0;
+    font-size: 15px;
+    height: 100%; }
+    footer .footerPrimera .footer__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 35%; }
+      footer .footerPrimera .footer__info p {
+        font-weight: 300; }
+    footer .footerPrimera .footer__derechos {
+      text-align: center;
+      font-size: 1rem; }
+    footer .footerPrimera .footer__logoRedes {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      footer .footerPrimera .footer__logoRedes .logo__footer {
+        height: 60px;
+        margin-right: 10px; }
+      footer .footerPrimera .footer__logoRedes .iconos__footer a {
+        text-decoration: none;
+        font-size: 3rem;
+        color: #E0E0E0; }
+        footer .footerPrimera .footer__logoRedes .iconos__footer a:hover {
+          color: #3A9E34; }
+
+/* ------------------------------ 11000px ------------------------------  */
+@media (max-width: 1100px) {
+  /* Desaparece del footer la información de la ubicación y el horario */
+  /* FOOTER */
+  footer .footerPrimera {
+    font-size: 12px; }
+    footer .footerPrimera .footer__info {
+      display: none; } }
+
+/* ------------------------------ 600px ------------------------------  */
+@media (max-width: 600px) {
+  /* Ajustes del Footer el column-reverse para mostrar primero el logo, luego las redes y por último los derechos*/
+  /* FOOTER */
+  footer {
+    height: 200px; }
+    footer .footerPrimera {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column-reverse;
+      height: 100%; }
+      footer .footerPrimera .footer__logoRedes {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px; }
+        footer .footerPrimera .footer__logoRedes .logo__footer {
+          margin-bottom: 5px;
+          margin-right: 0px; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #E0E0E0;
+  font-family: 'Roboto', sans-serif; }
+  body span {
+    color: #9E343A;
+    font-weight: 600; }
+
+/* ------------------------------ Página de Inicio ------------------------------  */
+/* Hero */
+/* --- Carrusel animado con 3 imágenes + info de nombre y botón de ---  */
+@keyframes animacionHero {
+  0% {
+    opacity: 1; }
+  20% {
+    opacity: 1; }
+  30% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  90% {
+    opacity: 1; } }
+
+.hero {
+  height: 100vh;
+  position: relative;
+  /* --- Contenedor .tituloH1 arriba de la img con info relevante en el H1 ---  */ }
+  .hero .menu__logo__blanco {
+    display: none; }
+  .hero .hero__photo1 {
+    background-image: url("../multimedia/home/hero1.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    animation: animacionHero 30s linear 20s infinite; }
+  .hero .hero_photo2 {
+    background-image: url("../multimedia/home/hero2.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    animation: animacionHero 30s linear 10s infinite; }
+  .hero .hero__photo3 {
+    background-image: url("../multimedia/home/hero3.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    animation: animacionHero 30s linear 0s infinite; }
+  .hero .hero__infoHero {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size: 2rem;
+    color: #E0E0E0; }
+    .hero .hero__infoHero a {
+      font-weight: 500;
+      font-size: 1.1rem;
+      text-decoration: none;
+      background-color: #666666a1;
+      color: #E0E0E0;
+      border: 2px solid #E0E0E0;
+      padding: .4rem;
+      border-radius: 5px; }
+      .hero .hero__infoHero a:hover {
+        background-color: #3A9E34; }
+  .hero .hero__tituloH1 {
+    position: absolute;
+    background-color: rgba(158, 52, 58, 0.6);
+    width: 500px;
+    height: 180px;
+    margin-left: 10%; }
+    .hero .hero__tituloH1 h1, .hero .hero__tituloH1 h2 {
+      font-weight: 500;
+      font-size: 3.4rem;
+      padding: 10px;
+      text-align: left;
+      line-height: 55px;
+      color: #E0E0E0; }
+
+/* Promociones */
+h1, h2 {
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: center;
+  color: #9E343A; }
+
+.promociones {
+  text-align: center;
+  margin: 50px; }
+  .promociones p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #1D2C36; }
+  .promociones .promocionesCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 50px; }
+    .promociones .promocionesCards .promociones__cardPromo {
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .promociones .promocionesCards .promociones__cardPromo img {
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 5px #cfcece; }
+      .promociones .promocionesCards .promociones__cardPromo .promociones__infoPromo {
+        background-color: rgba(158, 52, 58, 0.7);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 30%;
+        padding: 15px;
+        transition: height 1s; }
+        .promociones .promocionesCards .promociones__cardPromo .promociones__infoPromo:hover {
+          height: 120px; }
+        .promociones .promocionesCards .promociones__cardPromo .promociones__infoPromo p {
+          font-weight: 300;
+          font-size: 1.8rem;
+          color: #E0E0E0;
+          margin: 0; }
+    .promociones .promocionesCards .promociones__cardPromo a {
+      position: absolute;
+      top: 70%;
+      text-decoration: none;
+      background-color: #666666a1;
+      color: #E0E0E0;
+      border: 2px solid #E0E0E0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: .4rem;
+      border-radius: 5px; }
+      .promociones .promocionesCards .promociones__cardPromo a:hover {
+        background-color: #3A9E34; }
+
+/* Nuestros Chefs */
+.chefs {
+  text-align: center;
+  margin: 50px 50px; }
+  .chefs p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #1D2C36; }
+  .chefs .chefsCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 50px; }
+    .chefs .chefsCards .cardChef {
+      background-color: #1D2C36;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      width: 550px;
+      height: 500px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      box-shadow: 0px 0px 5px 5px #cfcece; }
+      .chefs .chefsCards .cardChef .imgChef {
+        height: 500px;
+        border-radius: 5px; }
+      .chefs .chefsCards .cardChef .infoChef {
+        color: #E0E0E0;
+        text-align: left;
+        padding: 20px; }
+        .chefs .chefsCards .cardChef .infoChef h3 {
+          font-weight: 500;
+          font-size: 2.3rem;
+          line-height: 2.3rem; }
+        .chefs .chefsCards .cardChef .infoChef p {
+          font-weight: 300;
+          font-size: 1.3rem;
+          line-height: 1.3rem;
+          text-align: left;
+          margin-bottom: 10px;
+          color: #E0E0E0; }
+
+/* Newsletter */
+.newsletter {
+  margin: 50px 50px;
+  background-color: #9E343A;
+  color: #E0E0E0;
+  position: relative;
+  box-shadow: 0px 0px 5px 5px #cfcece; }
+  .newsletter .newsletterInfo {
+    padding: 40px;
+    width: 95%; }
+  .newsletter h3 {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 30px;
+    width: 50%; }
+  .newsletter form {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .newsletter form .email {
+      margin-top: 10px;
+      width: 30%;
+      height: 25px;
+      border: none;
+      padding-left: 10px; }
+    .newsletter form .botonEnviar {
+      background-color: #1D2C36;
+      color: #E0E0E0;
+      padding: 6px;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer; }
+  .newsletter .newsletterImg {
+    background-image: url("../multimedia/home/newsletter1.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 50%; }
+
+/* ------------------------------ Página de Sucursales ------------------------------  */
+/* BANNER SUCURSALES*/
+.sucursales {
+  margin: 50px 50px;
+  /*SUCURSALES CARDS*/ }
+  .sucursales .imgHeroSucursales {
+    background-image: url(../multimedia/sucursales/delivery1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 400px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 5px 5px #cfcece; }
+    .sucursales .imgHeroSucursales .sucursales__cardTitulo {
+      background-color: rgba(158, 52, 58, 0.6);
+      width: 400px;
+      height: 250px;
+      margin-left: 40px; }
+      .sucursales .imgHeroSucursales .sucursales__cardTitulo p {
+        font-weight: 500;
+        font-size: 3.4rem;
+        padding: 10px;
+        text-align: left;
+        line-height: 45px;
+        color: #E0E0E0; }
+  .sucursales .sucursalesCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center; }
+    .sucursales .sucursalesCards .cardSucursales {
+      margin: 50px 0;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: left; }
+      .sucursales .sucursalesCards .cardSucursales h3 {
+        font-weight: 500;
+        font-size: 2rem;
+        color: #1D2C36; }
+      .sucursales .sucursalesCards .cardSucursales p {
+        font-weight: 300;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #1D2C36; }
+      .sucursales .sucursalesCards .cardSucursales .sucursalesIMG1 {
+        background-image: url(../multimedia/sucursales/sucursal1.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-radius: 5px;
+        width: 100%;
+        height: 520px;
+        box-shadow: 0px 0px 5px 5px #cfcece;
+        margin-bottom: 20px; }
+      .sucursales .sucursalesCards .cardSucursales .sucursalesIMG2 {
+        background-image: url(../multimedia/sucursales/sucursal2.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-radius: 5px;
+        width: 100%;
+        height: 520px;
+        box-shadow: 0px 0px 5px 5px #cfcece;
+        margin-bottom: 20px; }
+      .sucursales .sucursalesCards .cardSucursales .infoSucursal {
+        background-color: rgba(29, 44, 54, 0.8);
+        position: absolute;
+        border-radius: 5px;
+        height: 25%;
+        bottom: 0%; }
+        .sucursales .sucursalesCards .cardSucursales .infoSucursal p {
+          font-weight: 400;
+          font-size: 1.3rem;
+          color: #E0E0E0;
+          padding: 15px; }
+
+/* ------------------------------ Página de Menú ------------------------------  */
+/*PRODUCTOS EN VENTA, VARIEDADES DE LAS HAMBURGUESAS*/
+.menuHamburguesas {
+  margin: 50px 50px; }
+  .menuHamburguesas .hamburguesasCards {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .menuHamburguesas .hamburguesasCards .cardHamburguesas {
+      width: 370px;
+      text-align: center;
+      margin-bottom: 40px;
+      background-color: #f2f2f2;
+      box-shadow: 0px 0px 5px 5px #cfcece;
+      padding: 15px;
+      border-radius: 5px; }
+      .menuHamburguesas .hamburguesasCards .cardHamburguesas .infoHamburguesas__nombre {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-end; }
+        .menuHamburguesas .hamburguesasCards .cardHamburguesas .infoHamburguesas__nombre h3 {
+          font-weight: 500;
+          font-size: 2rem;
+          margin: 5px 0;
+          color: #1D2C36; }
+        .menuHamburguesas .hamburguesasCards .cardHamburguesas .infoHamburguesas__nombre i {
+          color: #D9A215;
+          margin-bottom: 10px; }
+      .menuHamburguesas .hamburguesasCards .cardHamburguesas .cardHamburguesa__borde {
+        border-top: 5px solid #9E343A;
+        margin-bottom: 10px; }
+      .menuHamburguesas .hamburguesasCards .cardHamburguesas .imgHmburguesa {
+        margin: 10px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1); }
+        .menuHamburguesas .hamburguesasCards .cardHamburguesas .imgHmburguesa:hover {
+          -webkit-filter: grayscale(0);
+          filter: grayscale(0); }
+      .menuHamburguesas .hamburguesasCards .cardHamburguesas .infoHamburguesas__precio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center; }
+        .menuHamburguesas .hamburguesasCards .cardHamburguesas .infoHamburguesas__precio p {
+          font-weight: 200;
+          font-size: 2rem;
+          font-weight: 600;
+          color: #9E343A; }
+        .menuHamburguesas .hamburguesasCards .cardHamburguesas .infoHamburguesas__precio a {
+          font-weight: 400;
+          font-size: 1rem;
+          text-decoration: none;
+          background-color: #3A9E34;
+          color: #E0E0E0;
+          padding: 7px;
+          border-radius: 5px;
+          font-weight: 600; }
+          .menuHamburguesas .hamburguesasCards .cardHamburguesas .infoHamburguesas__precio a:hover {
+            background-color: #9E343A; }
+
+/* ------------------------------ Página de Delivery ------------------------------  */
+/*BANNER*/
+.delivery {
+  margin: 50px 50px;
+  /*PEDIDOS*/ }
+  .delivery .imgHeroDelivery {
+    background-image: url(../multimedia/delivery/deliveryBanner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    margin: 50px 0;
+    box-shadow: 0px 0px 5px 5px #d6d6d6; }
+    .delivery .imgHeroDelivery .cardDelivery {
+      background-color: rgba(158, 52, 58, 0.6);
+      color: #E0E0E0;
+      height: 100%;
+      width: 40%;
+      padding: 30px;
+      text-align: center; }
+      .delivery .imgHeroDelivery .cardDelivery h3 {
+        font-weight: 500;
+        font-size: 3rem; }
+      .delivery .imgHeroDelivery .cardDelivery p {
+        font-weight: 300;
+        font-size: 2rem; }
+  .delivery h4 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-top: 40px;
+    color: #1D2C36; }
+  .delivery form {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "form__datos " "form__hamburguesas" "form__pago" "form__enviar";
+    grid-template-rows: 1fr 100px 70px 50px;
+    grid-template-columns: 100%; }
+    .delivery form .form__datos {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0; }
+      .delivery form .form__datos .formEstilo {
+        margin: 5px 10px;
+        width: 350px;
+        height: 25px;
+        border-radius: 5px;
+        border: 3px solid #9E343A;
+        padding: 15px;
+        box-shadow: 0px 0px 5px 5px #d6d6d6; }
+    .delivery form .form__hamburguesas {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #1D2C36; }
+    .delivery form .form__pago {
+      margin: 0 auto;
+      width: 250px;
+      height: 30px;
+      border: 3px solid #9E343A;
+      border-radius: 5px;
+      background-color: #E0E0E0;
+      color: #1D2C36;
+      box-shadow: 0px 0px 5px 5px #d6d6d6;
+      cursor: pointer; }
+    .delivery form .form__enviar {
+      font-weight: 500;
+      font-size: 1rem;
+      outline: none;
+      margin: 0 auto;
+      width: 150px;
+      height: 30px;
+      border: 3px solid #9E343A;
+      border-radius: 5px;
+      background-color: #9E343A;
+      color: #E0E0E0;
+      box-shadow: 0px 0px 5px 5px #d6d6d6;
+      cursor: pointer; }
+      .delivery form .form__enviar:hover {
+        background-color: #3A9E34;
+        border: 3px solid #3A9E34; }
+
+/* ------------------------------ Página de Reservsa ------------------------------  */
+/*RESERVA MESA*/
+.reserva {
+  margin: 50px 50px;
+  color: #1D2C36; }
+  .reserva p {
+    margin-bottom: 20px; }
+  .reserva .cardReserva {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    /*RESERVA IMG*/ }
+    .reserva .cardReserva .formReserva {
+      display: flex;
+      flex-direction: column;
+      align-content: center; }
+      .reserva .cardReserva .formReserva .formEstiloReserva {
+        margin-bottom: 10px;
+        height: 25px;
+        border-radius: 5px;
+        border: 3px solid #9E343A;
+        padding: 15px;
+        box-shadow: 0px 0px 5px 5px #d6d6d6; }
+      .reserva .cardReserva .formReserva .formEstiloReserva__solicitud {
+        margin: 10px 0;
+        height: 100px;
+        border-radius: 5px;
+        border: 3px solid #9E343A;
+        box-shadow: 0px 0px 5px 5px #d6d6d6; }
+      .reserva .cardReserva .formReserva .enviarReserva {
+        font-weight: 500;
+        font-size: 1rem;
+        margin-top: 10px;
+        padding: 7px;
+        border: 0px;
+        border-radius: 5px;
+        outline: none;
+        background-color: #9E343A;
+        color: #E0E0E0;
+        box-shadow: 0px 0px 5px 5px #d6d6d6;
+        cursor: pointer; }
+        .reserva .cardReserva .formReserva .enviarReserva:hover {
+          background-color: #3A9E34; }
+    .reserva .cardReserva .reservaFotos {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px; }
+      .reserva .cardReserva .reservaFotos .reservaFoto1 {
+        background-image: url(../multimedia/reserva/reserva1.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 5px;
+        width: 100%;
+        height: 200px;
+        box-shadow: 0px 0px 5px 5px #cfcece;
+        margin-bottom: 10px; }
+      .reserva .cardReserva .reservaFotos .reservaFoto2 {
+        background-image: url(../multimedia/reserva/reserva2.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 5px;
+        width: 100%;
+        height: 200px;
+        box-shadow: 0px 0px 5px 5px #cfcece;
+        margin-bottom: 10px; }
+      .reserva .cardReserva .reservaFotos .reservaFoto3 {
+        background-image: url(../multimedia/reserva/reserva3.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 5px;
+        width: 100%;
+        height: 200px;
+        box-shadow: 0px 0px 5px 5px #cfcece; }
+
+/* --------------------------------------------------------------- Media-Query--------------------------------------------------------------- */
+/* ------------------------------ 1000px ------------------------------  */
+@media (max-width: 1000px) {
+  /* Ajuste de las medidas en H1 y Newsletter, el form del mail queda arriba y la img pasa abajo + ajustes en la página Sucursales, las CARDS pasan a Column */
+  /* ------------------------------ Página de Inicio ------------------------------  */
+  /*HERO*/
+  .hero .hero__tituloH1 {
+    width: 450px;
+    height: 160px; }
+    .hero .hero__tituloH1 h1, .hero .hero__tituloH1 h2 {
+      line-height: 2.9rem;
+      font-size: 2.9rem;
+      color: #E0E0E0; }
+  /* Newsletter */
+  .newsletter {
+    margin: 50px; }
+    .newsletter .newsletterInfo {
+      display: flex;
+      flex-direction: column;
+      padding: 25px; }
+      .newsletter .newsletterInfo h3 {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 5px; }
+  /* ------------------------------ Página de Sucursales ------------------------------  */
+  /*SECCIÓN SUCURSALES CARD INFO*/
+  h1, h2 {
+    font-size: 2.5rem; }
+  .sucursales {
+    margin: 50px 20px; }
+    .sucursales .sucursalesCards {
+      display: flex;
+      flex-direction: column; }
+      .sucursales .sucursalesCards .cardSucursales {
+        width: 100%; }
+        .sucursales .sucursalesCards .cardSucursales .infoSucursal {
+          height: 20%; }
+  /* ------------------------------ Página de Delivery ------------------------------  */
+  /*SECCIÓN HERO DELIVERY*/
+  .delivery .imgHeroDelivery {
+    height: 500px; }
+    .delivery .imgHeroDelivery .cardDelivery {
+      position: absolute;
+      top: 300px;
+      height: 200px;
+      width: 100%;
+      padding: 20px; }
+      .delivery .imgHeroDelivery .cardDelivery h3 {
+        font-size: 3rem; }
+      .delivery .imgHeroDelivery .cardDelivery p {
+        font-size: 2rem; } }
+
+/* ------------------------------ 700px ------------------------------  */
+/* Ajuste de la sección CHEF y el H3 y el p, también se ajustaron las imágenes de la página Reserva*/
+@media (max-width: 700px) {
+  /* ------------------------------ Página de Inicio ------------------------------  */
+  /*SECCIÓN CHEF INFO*/
+  .chefs .chefsCards .cardChef .infoChef h3 {
+    font-size: 2rem;
+    line-height: 2rem; }
+  .chefs .chefsCards .cardChef .infoChef p {
+    font-size: 1.3rem;
+    line-height: 1.3rem; }
+  /* ------------------------------ Página de Reservsa ------------------------------  */
+  /*SECCIÓN FOTOS*/
+  .reserva .cardReserva .reservaFotos {
+    width: 100%; } }
+
+/* ------------------------------ 600px ------------------------------  */
+@media (max-width: 600px) {
+  /* Ajuste del Hero y el H1, la sección sCHEF y ahora pasa a flex-direction:columna, quedando arriba la imagen y abajo el contenedor con la información, medidas del Newsletter + ajustes a la página Sucursales */
+  /* ------------------------------ Página de Inicio ------------------------------  */
+  /* Hero*/
+  .hero .hero__tituloH1 {
+    width: 400px;
+    height: 140px; }
+    .hero .hero__tituloH1 h1, .hero .hero__tituloH1 h2 {
+      line-height: 2.5rem;
+      font-size: 2.5rem; }
+  h2 {
+    font-size: 2rem; }
+  /* Nuestros Chefs */
+  .chefs .chefsCards .cardChef {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end; }
+    .chefs .chefsCards .cardChef .imgChef {
+      width: 100%;
+      height: auto; }
+  /* Newsletter */
+  .newsletter {
+    height: 300px; }
+    .newsletter .newsletterInfo {
+      padding: 20px; }
+      .newsletter .newsletterInfo h3 {
+        width: 100%; }
+      .newsletter .newsletterInfo .newsletterImg {
+        top: 60%;
+        width: 100%;
+        height: 150px; }
+      .newsletter .newsletterInfo .email {
+        width: 80%; }
+  /* ------------------------------ Página de Sucursales ------------------------------  */
+  /*HERO SUCURSALES*/
+  .sucursales {
+    /*INFO SUCURSALES*/ }
+    .sucursales .imgHeroSucursales .sucursales__cardTitulo {
+      width: 250px;
+      height: 180px;
+      margin-left: 20px; }
+      .sucursales .imgHeroSucursales .sucursales__cardTitulo p {
+        line-height: 2rem;
+        font-size: 2rem; }
+    .sucursales .sucursalesCards {
+      display: flex;
+      flex-direction: column; }
+      .sucursales .sucursalesCards .cardSucursales {
+        width: 100%; }
+        .sucursales .sucursalesCards .cardSucursales .infoSucursal {
+          height: 20%; }
+          .sucursales .sucursalesCards .cardSucursales .infoSucursal p {
+            font-size: 1rem; } }
+
+/* ------------------------------ MOBILE ------------------------------  */
+@media (max-width: 450px) {
+  /* Versión mobile donde se ajusta el HERO, PROMOCIONES y CHEF */
+  /* ------------------------------ Página de Inicio ------------------------------  */
+  /* HERO*/
+  .hero .menu__logo__blanco {
+    position: absolute;
+    display: inline;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto auto 30px auto; }
+  .hero .hero__tituloH1 {
+    width: 250px;
+    height: 100px; }
+    .hero .hero__tituloH1 h1, .hero .hero__tituloH1 h2 {
+      line-height: 1.8rem;
+      font-size: 1.7rem; }
+  .hero .hero__infoHero {
+    top: 20%; }
+  /*PROMOCIONES*/
+  h2 {
+    font-size: 2rem;
+    line-height: 2rem; }
+  .promociones {
+    margin: 50px 20px; }
+    .promociones p {
+      font-size: 1.4rem;
+      line-height: 1.4rem; }
+    .promociones .promocionesCards .promociones__cardPromo img {
+      width: 100%; }
+    .promociones .promocionesCards .promociones__cardPromo .promociones__infoPromo {
+      height: 40%;
+      padding: 20px; }
+      .promociones .promocionesCards .promociones__cardPromo .promociones__infoPromo p {
+        font-size: 1.8rem;
+        line-height: 1.8rem; }
+  /*CHEFS*/
+  .chefs {
+    margin: 50px 20px; }
+    .chefs p {
+      font-size: 1.4rem;
+      line-height: 1.4rem; }
+  /* Newsletter */
+  .newsletter {
+    margin: 50px 20px; }
+  /* ------------------------------ Página de Menú ------------------------------  */
+  /*MENU HAMBURGUESA*/
+  .menuHamburguesas .hamburguesasCards .cardHamburguesas {
+    width: 320px; }
+    .menuHamburguesas .hamburguesasCards .cardHamburguesas .infoHamburguesas__nombre h3 {
+      font-size: 1.5rem; }
+    .menuHamburguesas .hamburguesasCards .cardHamburguesas .imgHmburguesa {
+      width: 250px; }
+  /* ------------------------------ Página de Delivery ------------------------------  */
+  /*HERO DELIVERY*/
+  .delivery {
+    margin: 50px 20px; }
+    .delivery .imgHeroDelivery .cardDelivery {
+      top: 400px;
+      height: 100px;
+      padding: 15px; }
+      .delivery .imgHeroDelivery .cardDelivery h3 {
+        font-size: 1.5rem; }
+      .delivery .imgHeroDelivery .cardDelivery p {
+        font-size: 1.2rem; }
+  /* ------------------------------ Página de Reservsa ------------------------------  */
+  /*RESERVA MESA*/
+  .reserva {
+    margin: 50px 20px; } }

@@ -1,0 +1,103 @@
+/* FOOTER */
+
+footer {
+    margin-top: 80px;
+    height: 120px;
+
+    .footerPrimera {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $secondaryColor;
+        padding: 10px;
+        color: $tertiaryColor;
+        font-size: 15px;
+        height: 100%;
+
+        .footer__info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 35%;
+
+            p {
+                font-weight: 300;
+            }
+        }
+
+        .footer__derechos {
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .footer__logoRedes {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .logo__footer {
+                height: 60px;
+                margin-right: 10px;
+            }
+            .iconos__footer a {
+                text-decoration: none;
+                font-size: 3rem;
+                color: $tertiaryColor;
+
+                &:hover {
+                    color: $hoverColor;
+                }
+            }            
+        }
+    }
+}
+
+/* ------------------------------ 11000px ------------------------------  */
+
+@media (max-width: 1100px) {
+
+    /* Desaparece del footer la información de la ubicación y el horario */
+               
+    /* FOOTER */
+    footer {
+
+        .footerPrimera {
+            font-size: 12px;
+
+            .footer__info {
+                display: none;
+            }
+        }
+    }
+}
+
+/* ------------------------------ 600px ------------------------------  */
+
+@media (max-width: 600px) {
+
+/* Ajustes del Footer el column-reverse para mostrar primero el logo, luego las redes y por último los derechos*/
+               
+    /* FOOTER */
+    footer {
+        height: 200px;
+
+        .footerPrimera {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column-reverse;
+            height: 100%;
+
+            .footer__logoRedes {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 5px;
+
+                .logo__footer {
+                    margin-bottom: 5px;
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}
